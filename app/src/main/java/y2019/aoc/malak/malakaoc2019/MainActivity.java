@@ -2,9 +2,11 @@ package y2019.aoc.malak.malakaoc2019;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView tvEmail, tvPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         String email = getIntent().getStringExtra("email");
 
-
         tvEmail = findViewById(R.id.tvEmail);
-        tvPasswored
+        tvPassword = findViewById(R.id.tvPassword);
+
+        tvEmail.setText(email);
+        tvPassword.setText(password);
     }
 }

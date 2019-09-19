@@ -14,6 +14,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     //1. proporties defenition
     EditText editTextEmail, editTextPassword;
     Button buttonLogIn, buttonSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,28 +36,21 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if (v == buttonLogIn) {
-            if (editTextPassword.getText().toString().equals("")|| editTextEmail.getText().toString().equals(""))
-            {
+            if (editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals("")) {
                 Toast.makeText(this, " Empty Password or Email", Toast.LENGTH_LONG).show();
 
+            } else {
+
+                {
+                    Intent i = new Intent(this, MainActivity.class);
+                    i.putExtra("email", editTextEmail.getText().toString());
+                    i.putExtra("password", editTextPassword.getText().toString());
+                    startActivity(i);
+                }
             }
-            else {
-
-
-                Intent i = new Intent( this, MainActivity.class);
-                i.putExtra("email", editTextEmail.getText().toString());
-                i.putExtra("password", editTextPassword.getText().toString());
-                startActivity(i);
-        }
-        else {
-            Intent i = new Intent (this, SignUpActivity.class);
-            startActivity(i);
-            }
-
         }
     }
+}
 
 
-
-    }
 
