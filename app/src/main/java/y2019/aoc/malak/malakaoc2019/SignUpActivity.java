@@ -41,13 +41,18 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
             } else {
 
-                {
-                    Intent i = new Intent(this, MainActivity.class);
-                    i.putExtra("email", editTextEmail.getText().toString());
-                    i.putExtra("password", editTextPassword.getText().toString());
-                    startActivity(i);
-                }
+
+                Intent i = new Intent(this, MainActivity.class);
+                i.putExtra("email", editTextEmail.getText().toString());
+                i.putExtra("password", editTextPassword.getText().toString());
+                startActivity(i);
             }
+        } else {
+            if (v == buttonSignUp){
+                Intent i = new Intent( this, MainActivity.class);
+            startActivity(i);
+
+        }
         }
     }
 }

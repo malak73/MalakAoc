@@ -5,37 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/work1"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="260dp"
-        android:text="hi malak"
-        />
-
-    <Button
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="sign in" />
+        android:id="@+id/textView"
+        android:layout_width="303dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="200dp"
+        android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
+        android:autoSizeTextType="uniform"
+        android:autoText="true"
+        android:background="#009C27B0"
+        android:gravity="center"
+        android:text="WORK HARD, MAKE IT HAPPEN" />
 
     <Button
         android:id="@+id/signUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="250dp"
+        android:text="Sign Up" />
 
-    <TextView
-        android:id="@+id/tvEmail"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/tvPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        <Button
+            android:id="@+id/loginIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in" />
+    </LinearLayout>
 
 </LinearLayout>
