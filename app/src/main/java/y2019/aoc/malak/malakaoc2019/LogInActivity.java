@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LogInActivity extends Activity {
+public class LogInActivity extends Activity  implements View.OnClickListener{
 
     //1. proporties defenition
     EditText editTextEmail, editTextPassword;
@@ -17,14 +17,14 @@ public class LogInActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_log_in);
 
         //2. initiallize proporties
 
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
 
-        buttonLogIn = findViewById(R.id.buttonSignIn);
+        buttonLogIn = findViewById(R.id.buttonLogIn);
         buttonLogIn.setOnClickListener(this);
 
 

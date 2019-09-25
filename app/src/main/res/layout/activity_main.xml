@@ -11,8 +11,8 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="303dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
+        android:layout_height="57dp"
+        android:layout_gravity="center|top"
         android:layout_marginBottom="0dp"
         android:layout_marginTop="200dp"
         android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
@@ -20,7 +20,8 @@
         android:autoText="true"
         android:background="#009C27B0"
         android:gravity="center"
-        android:text="WORK HARD, MAKE IT HAPPEN" />
+        android:text="WORK HARD, MAKE IT HAPPEN"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/signUp"
@@ -40,6 +41,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log in" />
+        <Button
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+        <Button
+        android:id="@+id/tvPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password" />
+
+
+
+
     </LinearLayout>
 
 </LinearLayout>
