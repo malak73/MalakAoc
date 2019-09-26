@@ -37,22 +37,10 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/loginIn"
+            android:id="@+id/logIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log in" />
-        <Button
-            android:id="@+id/tvEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email" />
-        <Button
-        android:id="@+id/tvPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Password" />
-
-
 
 
     </LinearLayout>

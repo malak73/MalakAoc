@@ -6,14 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     //1. proporties defenition
-    EditText editTextEmail, editTextPassword;
-    Button buttonLogIn, buttonSignUp;
+    EditText editTextEmail, editTextPassword, editTextPasswordConfirm, editTextName, editTextPhoneNumber ;
+    Button  buttonSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
 
-        buttonLogIn = findViewById(R.id.buttonSignIn);
-        buttonLogIn.setOnClickListener(this);
+
 
 
         buttonSignUp = findViewById(R.id.buttonSignUp);
@@ -35,9 +35,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        if (v == buttonLogIn) {
-            if (editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals("")) {
-                Toast.makeText(this, " Empty Password or Email", Toast.LENGTH_LONG).show();
+            if (v == buttonSignUp) {
+            if (editTextPassword.getText().toString().equals("")) {
+                Toast.makeText(this, " Empty Password", Toast.LENGTH_LONG).show();
 
             } else {
 
@@ -47,12 +47,31 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
             }
+            if (editTextEmail.getText().toString().equals("")){
+                Toast.makeText(this, " Empty Email", Toast.LENGTH_LONG).show();
+            }
+
+            if (editTextPasswordConfirm.getText().toString().equals("")||!editTextPasswordConfirm.getText().toString().equals(editTextPassword)
+            ) {
+                Toast.makeText(this, "confirm password os empty or wrong", Toast.LENGTH_LONG).show();
+            }
+
+            if (editTextName.getText().toString().equals("")){
+                Toast.makeText(this, "write your name", Toast.LENGTH_LONG).show();
+            }
+            if (editTextPhoneNumber.getText().toString().equals("")){
+                Toast.makeText(this, " Empty phone Number", Toast.LENGTH_LONG).show();
+            }
+
         } else {
+
             if (v == buttonSignUp){
                 Intent i = new Intent( this, MainActivity.class);
             startActivity(i);
 
         }
+
+
         }
     }
 }
