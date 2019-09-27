@@ -24,10 +24,6 @@ public class LogInActivity extends Activity  implements View.OnClickListener{
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
 
-        buttonLogIn = findViewById(R.id.buttonLogIn);
-        buttonLogIn.setOnClickListener(this);
-
-
         buttonSignUp = findViewById(R.id.buttonSignUp);
         buttonSignUp.setOnClickListener(this);
     }

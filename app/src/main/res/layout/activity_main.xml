@@ -17,7 +17,6 @@
         android:layout_marginTop="200dp"
         android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
         android:autoSizeTextType="uniform"
-        android:autoText="true"
         android:background="#009C27B0"
         android:gravity="center"
         android:text="WORK HARD, MAKE IT HAPPEN"
@@ -43,6 +42,5 @@
             android:text="Log in" />
 
 
-    </LinearLayout>
-
+</LinearLayout>
 </LinearLayout>

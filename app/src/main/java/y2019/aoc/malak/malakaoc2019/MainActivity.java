@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button signUp, logIn;
 
@@ -17,14 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         signUp = findViewById(R.id.signUp);
+        signUp.setOnClickListener(this);
+
         logIn = findViewById(R.id.logIn);
 
 
-            {
+    }
 
-            }
-
-
-
+    @Override
+    public void onClick(View v) {
+        if (v == signUp) {
+            Intent i = new Intent(this, SignUpActivity.class);
+            startActivity(i);
+        }
     }
 }
