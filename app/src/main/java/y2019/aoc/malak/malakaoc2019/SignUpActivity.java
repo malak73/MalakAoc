@@ -53,7 +53,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
             if (editTextPasswordConfirm.getText().toString().equals("")||!editTextPasswordConfirm.getText().toString().equals(editTextPassword)
             ) {
-                Toast.makeText(this, "confirm password os empty or wrong", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "confirm password ןs empty or wrong", Toast.LENGTH_LONG).show();
             }
 
             if (editTextName.getText().toString().equals("")){

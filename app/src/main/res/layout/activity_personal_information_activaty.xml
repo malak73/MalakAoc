@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/work1"
+    tools:context=".PersonalInformationActivaty">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/personalInfotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Information" />
+
+        <EditText
+            android:id="@+id/editage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="age" />
+
+
+        <EditText
+            android:id="@+id/editarea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="living area" />
+
+        <EditText
+            android:id="@+id/editJobType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="job type" />
+
+        <EditText
+            android:id="@+id/EditIntrestedArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="areas you want to work in" />
+
+        <EditText
+            android:id="@+id/editSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="subject" />
+
+        <Button
+            android:id="@+id/buttonFindJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="find  a job" />
+
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
