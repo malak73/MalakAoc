@@ -12,8 +12,8 @@ import android.widget.TextView;
 
 public class PersonalInformationActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button chooseClub;
-    String[]listItems;
+    Button  findJob;
+    String[] listItems;
     TextView personalInfotext;
     EditText editage, editarea, editJobType, editIntrestedArea, editSubject;
 
@@ -29,28 +29,44 @@ public class PersonalInformationActivity extends AppCompatActivity implements Vi
 
 
         listItems = getResources().getStringArray(R.array.club_list);
+
         personalInfotext = findViewById(R.id.personalInfotext);
         editage = findViewById(R.id.editage);
         editarea = findViewById(R.id.editarea);
         editJobType = findViewById(R.id.editJobType);
         editIntrestedArea = findViewById(R.id.editIntrestedArea);
         editSubject = findViewById(R.id.editSubject);
+ findJob = findViewById(R.id.buttonFindJob);
+ findJob.setOnClickListener(this);
+ findJob.setOnClickListener(new View.OnClickListener() {
 
 
+     @Override
+     public void onClick(View v) {
+         AlertDialog.Builder mBuilder= new AlertDialog.Builder(PersonalInformationActivity.this);
+         mBuilder.setTitle("choose an area");
+         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
+             @Override
+             public void onClick(DialogInterface dialog, int which) {
+                 dialogInterface.dismiss();
+             }
+         });
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+     }
+ }
+
+
+}
     }
 
 
-         public void onClick (View v) {
-             AlertDialog.Builder mBuilder=new AlertDialog.Builder(SignUpActivity.this);
-             mBuilder.setTitle("CHOOSE AREA");
-             mBuilder.setSingleChoiceItems(listItems, new DialogInterface().OnCancelListener() {
 
-            }
-        }
+}
 
 
 
-    }
+
 
 
 
