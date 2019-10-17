@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-ש   
+ש
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
 
