@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/work1"
+    android:layout_height="match_parent"
+    tools:context=".BusinessAccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+            <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/workPlace"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:text="name of the work place" />
+
+        <EditText
+            android:id="@+id/Requirments"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="requirments for work" />
+
+        <EditText
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btaddJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add job" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
