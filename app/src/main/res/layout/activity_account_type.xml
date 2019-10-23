@@ -14,21 +14,27 @@
 
         <Button
             android:id="@+id/btBuisnessAccount"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="250dp"
-            android:layout_height="wrap_content"
-            android:text="Buisness Account" />
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:background="@drawable/buisnes_button"
+            android:text="Buisness Account"
+            />
 
         <Button
             android:id="@+id/btPersonalAccount"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="15dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:background="@drawable/buisnes_button"
             android:gravity="center"
             android:text="Personal Account" />
     </LinearLayout>

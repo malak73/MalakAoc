@@ -20,9 +20,9 @@ public class ListOfJob extends AppCompatActivity {
         job = new ArrayList<>();
 
 
-        job.add(new Item(R.drawable.download, "name"));
+  /*      job.add(new Item(R.drawable.download, "name"));
         job.add(new Item(R.drawable.download, "area"));
-        job.add(new Item(R.drawable.download, "find a job"));
+        job.add(new Item(R.drawable.download, "find a job"));*/
 
 
     }

@@ -18,29 +18,31 @@
         android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
         android:autoSizeTextType="uniform"
         android:background="#009C27B0"
+
         android:gravity="center"
         android:text="WORK HARD, MAKE IT HAPPEN"
         android:textStyle="bold|italic" />
 
     <Button
+        android:id="@+id/logIn"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_gravity="center"
+        android:background="@drawable/buisnes_button"
+        android:gravity="center"
+        android:text="Log in" />
+
+    <Button
         android:id="@+id/signUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/buisnes_button"
+        android:gravity="center"
         android:text="Sign Up" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/logIn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Log in" />
-
-
-</LinearLayout>
 </LinearLayout>
