@@ -19,7 +19,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="20dp"
             android:autoSizeTextType="none"
-            android:text="Email:"
+            android:hint="Email:"
             android:textSize="24sp"
             android:textStyle="bold|italic" />
 
@@ -38,7 +38,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="20dp"
         android:autoSizeTextType="none"
-        android:text="Full Name:"
+        android:hint="Full Name:"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
@@ -47,7 +47,7 @@
         android:layout_width="423dp"
         android:layout_height="56dp"
         android:layout_marginBottom="20dp"
-        android:text="phone number:"
+        android:hint="phone number:"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="53dp"
         android:layout_marginBottom="20dp"
-        android:text="Password:"
+        android:hint="Password:"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
@@ -64,7 +64,7 @@
         android:id="@+id/editTextPasswordConfirm"
         android:layout_width="match_parent"
         android:layout_height="62dp"
-        android:text="confirm password:"
+        android:hint="confirm password:"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
@@ -72,7 +72,9 @@
         android:id="@+id/buttonSignUp"
         android:layout_width="339dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/buisnes_button"
         android:layout_gravity="center"
+        android:textColor="#FFFFFF"
         android:text="sign up" />
 
 </LinearLayout>

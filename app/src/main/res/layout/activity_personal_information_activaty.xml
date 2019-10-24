@@ -24,36 +24,38 @@
             android:id="@+id/editage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="age" />
+            android:hint="age" />
 
 
         <EditText
             android:id="@+id/editarea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="living area" />
+            android:hint="living area" />
 
         <EditText
             android:id="@+id/editJobType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="job type" />
+            android:hint="job type" />
 
         <EditText
             android:id="@+id/editIntrestedArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="areas you want to work in" />
+            android:hint="areas you want to work in" />
 
         <EditText
             android:id="@+id/editSubject"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="subject" />
+            android:hint="subject" />
 
         <Button
             android:id="@+id/buttonFindJob"
             android:layout_width="match_parent"
+            android:background="@drawable/buisnes_button"
+            android:textColor="#FFFFFF"
             android:layout_height="wrap_content"
             android:text="continue" />
 

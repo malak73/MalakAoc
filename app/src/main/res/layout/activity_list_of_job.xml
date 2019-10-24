@@ -16,6 +16,7 @@
         <Button
             android:id="@+id/btFindJob"
             android:layout_width="wrap_content"
+            android:background="@drawable/buisnes_button"
             android:layout_height="wrap_content"
             android:text="find Job" />
 
@@ -23,12 +24,12 @@
             android:id="@+id/area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="name" />
+            android:hint="name" />
 
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="area" />
+            android:hint="area" />
     </ListView>
 </LinearLayout>

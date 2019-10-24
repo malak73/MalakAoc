@@ -18,7 +18,8 @@
         android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
         android:autoSizeTextType="uniform"
         android:background="#009C27B0"
-
+android:textColor="#FFFFFF"
+        android:textSize="30sp"
         android:gravity="center"
         android:text="WORK HARD, MAKE IT HAPPEN"
         android:textStyle="bold|italic" />
@@ -32,7 +33,9 @@
         android:layout_gravity="center"
         android:background="@drawable/buisnes_button"
         android:gravity="center"
-        android:text="Log in" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:hint="Log in" />
 
     <Button
         android:id="@+id/signUp"
@@ -42,7 +45,8 @@
         android:layout_marginBottom="25dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/buisnes_button"
+        android:textColorHint="#FFFFFF"
         android:gravity="center"
-        android:text="Sign Up" />
+        android:hint="Sign Up" />
 
 </LinearLayout>
