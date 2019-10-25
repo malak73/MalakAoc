@@ -2,13 +2,14 @@ package y2019.aoc.malak.malakaoc2019;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LogInActivity extends Activity  implements View.OnClickListener{
+public class LogInActivity extends Activity implements View.OnClickListener{
 
     //1. proporties defenition
     EditText editTextEmail, editTextPassword;
@@ -37,18 +38,14 @@ public class LogInActivity extends Activity  implements View.OnClickListener{
             } else {
 
 
-                Intent i = new Intent(this, MainActivity.class);
+                Intent i = new Intent(this, ListOfJob.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
-                startActivity(i);
-            }
-        } else {
-            if (v == buttonSignUp){
-                Intent i = new Intent( this, MainActivity.class);
                 startActivity(i);
 
             }
         }
     }
 }
+
 

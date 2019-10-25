@@ -71,8 +71,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }
-
-
+                        
                         // ...
                     }
                 });

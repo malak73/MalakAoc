@@ -1,52 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/work1"
+    android:background="@drawable/work"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="303dp"
         android:layout_height="57dp"
-        android:layout_gravity="center|top"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="200dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="52dp"
         android:autoSizeMaxTextSize="@android:dimen/app_icon_size"
         android:autoSizeTextType="uniform"
         android:background="#009C27B0"
-android:textColor="#FFFFFF"
+        android:gravity="top"
+        android:text="get ready to find your dream job"
+        android:textColor="#8f98ff"
         android:textSize="30sp"
-        android:gravity="center"
-        android:text="WORK HARD, MAKE IT HAPPEN"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="112dp" />
 
     <Button
         android:id="@+id/logIn"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp"
         android:layout_gravity="center"
+
         android:background="@drawable/buisnes_button"
         android:gravity="center"
+        android:hint="Log in"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:hint="Log in" />
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="609dp" />
 
     <Button
         android:id="@+id/signUp"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="25dp"
-        android:layout_marginTop="25dp"
         android:background="@drawable/buisnes_button"
-        android:textColorHint="#FFFFFF"
         android:gravity="center"
-        android:hint="Sign Up" />
+        android:hint="Sign Up"
+        android:textColorHint="#FFFFFF"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="520dp" />
 
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
