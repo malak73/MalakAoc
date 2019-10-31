@@ -28,21 +28,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         logIn = findViewById(R.id.logIn);
 
 
-        Uri uri= Uri.parse("android.resource;//" + getPackageName()+R.raw.welcomevideo);
+        Uri uri= Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.welcomevideo);
         videoBG.setVideoURI(uri);
         videoBG.start();
 
         videoBG.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                mMediaPlayer = mMediaPlayer;
-                mMediaPlayer.setLooping(true);
+                mMediaPlayer = mp;
 
-                 if (mCurrentVideoPosition != 0){
-                     mMediaPlayer.seekTo((mCurrentVideoPosition));
-                     mMediaPlayer.start();
-                 }
-            }
+                        mMediaPlayer.setLooping(true);
+
+                        if (mCurrentVideoPosition != 0){
+                            mMediaPlayer.seekTo((mCurrentVideoPosition));
+                            mMediaPlayer.start();
+                        }
+                    }
+
         });
     }
     @Override
