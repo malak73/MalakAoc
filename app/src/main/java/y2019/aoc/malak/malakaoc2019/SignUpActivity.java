@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    //1. proporties defenition
     EditText editTextEmail, editTextPassword, editTextPasswordConfirm, editTextName, editTextPhoneNumber ;
     Button  buttonSignUp;
     private FirebaseAuth mAuth;

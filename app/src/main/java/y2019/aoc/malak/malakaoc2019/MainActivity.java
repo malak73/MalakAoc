@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     MediaPlayer mMediaPlayer;
     private VideoView videoBG;
     int mCurrentVideoPosition;
+    EditText editTextPassword, editTextEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         videoBG =(VideoView)findViewById(R.id.videoView);
-        signUp = findViewById(R.id.signUp);
+        signUp = findViewById(R.id.buttonSignUp);
         signUp.setOnClickListener(this);
         logIn = findViewById(R.id.logIn);
 
@@ -74,8 +78,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         if (v == logIn) {
-            Intent i=new Intent(this, LogInActivity.class);
-            startActivity(i);
-}
+            if (editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals("")) {
+                Toast.makeText(this, " Empty Password or Email", Toast.LENGTH_LONG).show();
+
+            }
+            if (v ==logIn){
+                Intent i = new Intent(this, ListOfJob.class);
+                i.putExtra("email", editTextEmail.getText().toString());
+                i.putExtra("password", editTextPassword.getText().toString());
+                startActivity(i);
+
+
+            }
     }
-}
+}}
