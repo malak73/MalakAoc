@@ -26,13 +26,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        videoBG =(VideoView)findViewById(R.id.videoView);
+
+
+        videoBG = (VideoView) findViewById(R.id.videoView);
         signUp = findViewById(R.id.buttonSignUp);
         signUp.setOnClickListener(this);
         logIn = findViewById(R.id.logIn);
+        logIn.setOnClickListener(this);
 
 
-        Uri uri= Uri.parse("android.resource://" + getPackageName()+"/"+R.raw.welcomevideo);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.welcomevideo);
         videoBG.setVideoURI(uri);
         videoBG.start();
 
@@ -41,35 +44,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPrepared(MediaPlayer mp) {
                 mMediaPlayer = mp;
 
-                        mMediaPlayer.setLooping(true);
+                mMediaPlayer.setLooping(true);
 
-                        if (mCurrentVideoPosition != 0){
-                            mMediaPlayer.seekTo((mCurrentVideoPosition));
-                            mMediaPlayer.start();
-                        }
-                    }
+                if (mCurrentVideoPosition != 0) {
+                    mMediaPlayer.seekTo((mCurrentVideoPosition));
+                    mMediaPlayer.start();
+                }
+            }
 
         });
     }
+
     @Override
-    protected void onPause(){
-    super.onPause();
-    mCurrentVideoPosition =mMediaPlayer.getCurrentPosition();
-    videoBG.pause();
+    protected void onPause() {
+        super.onPause();
+        mCurrentVideoPosition = mMediaPlayer.getCurrentPosition();
+        videoBG.pause();
 
-        }
-        @Override
-        protected  void onResume(){
+    }
+
+    @Override
+    protected void onResume() {
         super.onResume();
-         videoBG.start();
-        }
+        videoBG.start();
+    }
 
-        @Override
-        protected void onDestroy(){
+    @Override
+    protected void onDestroy() {
         super.onDestroy();
         mMediaPlayer.release();
-        mMediaPlayer=null;
-        }
+        mMediaPlayer = null;
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -77,17 +83,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent i = new Intent(this, AccountTypeActivity.class);
             startActivity(i);
         }
+
+
         if (v == logIn) {
             if (editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals("")) {
                 Toast.makeText(this, " Empty Password or Email", Toast.LENGTH_LONG).show();
 
-            }
-            if (v ==logIn){
+            } else {
+
+
                 Intent i = new Intent(this, ListOfJob.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
-
 
             }
     }
