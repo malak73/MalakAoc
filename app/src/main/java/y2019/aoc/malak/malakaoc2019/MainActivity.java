@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             } else {
 
 
-                Intent i = new Intent(this, ListOfJob.class);
+                Intent i = new Intent(this, ListOfJobs.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
