@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +15,7 @@ import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button signUp, logIn;
+    Button signIn, logIn;
     MediaPlayer mMediaPlayer;
     private VideoView videoBG;
     int mCurrentVideoPosition;
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         videoBG = (VideoView) findViewById(R.id.videoView);
-        signUp = findViewById(R.id.buttonSignUp);
-        signUp.setOnClickListener(this);
+        signIn = findViewById(R.id.signIn);
+        signIn.setOnClickListener(this);
         logIn = findViewById(R.id.logIn);
         logIn.setOnClickListener(this);
 
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v == signUp) {
+        if (v == signIn) {
             Intent i = new Intent(this, AccountTypeActivity.class);
             startActivity(i);
         }
@@ -88,11 +89,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v == logIn) {
             if (editTextPassword.getText().toString().equals("") || editTextEmail.getText().toString().equals("")) {
                 Toast.makeText(this, " Empty Password or Email", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(this, LogIn.class);
 
             } else {
 
 
-                Intent i = new Intent(this, ListOfJobs.class);
+                Intent i = new Intent(this, AccountTypeActivity.class);
                 i.putExtra("email", editTextEmail.getText().toString());
                 i.putExtra("password", editTextPassword.getText().toString());
                 startActivity(i);
